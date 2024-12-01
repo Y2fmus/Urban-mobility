@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation System Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #4CAF50;
+            color: white;
+            width: 250px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            margin-bottom: 30px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            width: 100%;
+            text-align: center;
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar a:hover {
+            background-color: #45a049;
+        }
+        .sidebar a.active {
+            background-color: #388e3c;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .main-content h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .main-content .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .main-content .card h2 {
+            margin-bottom: 10px;
+        }
+        .main-content .card p {
+            color: #555;
+        }
+        .main-content .card button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .main-content .card button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Transportation System</h2>
+        <a href="#" class="active" onclick="showSection('profile')">Profile</a>
+        <a href="#" onclick="showSection('schedule')">Bus Pickup Schedule</a>
+        <a href="#" onclick="showSection('Taxi')">Book a Taxi</a>
+        <a href="#" onclick="showSection('payment')">History Payment</a>
+    </div>
+    <div class="main-content">
+        <div id="profile" class="card active-section">
+            <h1>Profile</h1>
+            <p>View and update your personal details, manage your account settings, and review your past activities.</p>
+            <button>View Profile</button>
+        </div>
+        <div id="schedule" class="card">
+            <h1>Bus Pickup Schedule</h1>
+            <p>Check the schedule for upcoming bus pickups. You can also plan your trips based on available buses.</p>
+            <button>View Schedule</button>
+        </div>
+        <div id="Taxi" class="card">
+            <h1>Book a Taxi</h1>
+            <p>Need a ride? Book a Taxi car quickly and conveniently with just a few clicks.</p>
+            <button>Book Now</button>
+        </div>
+        <div id="payment" class="card">
+            <h1>History Payment</h1>
+            <p>view your transaction history</p>
+            <button>History Payment</button>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.display = 'none';
+            });
+
+            // Remove active class from all links
+            document.querySelectorAll('.sidebar a').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Show the selected section and set active link
+            document.getElementById(sectionId).style.display = 'block';
+            document.querySelector(`.sidebar a[onclick="showSection('${sectionId}')"]`).classList.add('active');
+        }
+
+        // Set default active section
+        document.getElementById('profile').style.display = 'block';
+    </script>
+</body>
+</html>
