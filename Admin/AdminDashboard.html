@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .dashboard-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .header {
+            width: 100%;
+            background-color: #007bff;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .dashboard-menu {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .menu-card {
+            background-color: #ffffff;
+            width: 45%;
+            min-width: 250px;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .menu-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .menu-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .menu-card p {
+            color: #555;
+            margin: 0 0 15px;
+        }
+        .menu-card button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .menu-card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    Admin Dashboard
+</div>
+
+<div class="dashboard-container">
+    <div class="dashboard-menu">
+        <!-- View Transactions -->
+        <div class="menu-card">
+            <h3>View Transactions</h3>
+            <p>View all transactions made by customers.</p>
+            <button onclick="viewTransactions()">View Transactions</button>
+        </div>
+        <!-- Edit Schedule -->
+        <div class="menu-card">
+            <h3>Edit Schedule</h3>
+            <p>Edit bus pickup schedules and times.</p>
+            <button onclick="editSchedule()">Edit Schedule</button>
+        </div>
+        <!-- Manage Drivers -->
+        <div class="menu-card">
+            <h3>Manage Drivers</h3>
+            <p>View and manage driver details.</p>
+            <button onclick="manageDrivers()">Manage Drivers</button>
+        </div>
+        <!-- View Users -->
+        <div class="menu-card">
+            <h3>View Users</h3>
+            <p>View all registered users.</p>
+            <button onclick="viewUsers()">View Users</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
