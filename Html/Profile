@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+  
+</head>
+<body>
+
+<div class="profile-container">
+    <h2>Your Profile</h2>
+    <img src="test.jpeg" alt="Profile Picture" class="profile-picture">
+    <div class="profile-info">
+        <label>Full Name:</label>
+        <p>Hariz Hamdan</p>
+        <label>Email:</label>
+        <p>harizhamdan01@gmail.com</p>
+        <label>Phone:</label>
+        <p>01164567789</p>
+        <label>Role:</label>
+        <p>User</p>
+    </div>
+    <button class="edit-btn" onclick="editProfile()">Edit Profile</button>
+</div>
+
+<script>
+    function editProfile() {
+        // Redirect to the edit profile page
+        window.location.href = "/edit-profile";
+    }
+</script>
+
+</body>
+</html>
