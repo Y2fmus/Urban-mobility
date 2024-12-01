@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .dashboard-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .header {
+            width: 100%;
+            background-color: #4CAF50;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .dashboard-menu {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 800px;
+        }
+        .menu-card {
+            background-color: #ffffff;
+            width: 45%;
+            min-width: 200px;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .menu-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .menu-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .menu-card p {
+            color: #555;
+            margin: 0 0 15px;
+        }
+        .menu-card button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .menu-card button:hover {
+            background-color: #45a049;
+        }
+
+        /* Bus schedule section styles */
+        .schedule-container {
+            margin-top: 20px;
+            padding: 20px;
+            width: 80%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .schedule-container h3 {
+            text-align: center;
+            color: #333;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .schedule-table th, .schedule-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .schedule-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    Driver Dashboard
+</div>
+
+<div class="dashboard-container">
+    <div class="dashboard-menu">
+        <!-- Driver Profile -->
+        <div class="menu-card">
+            <h3>Driver Profile</h3>
+            <p>View and update your profile information.</p>
+            <button onclick="viewDriverProfile()">View Profile</button>
+        </div>
+        <!-- Bus Schedule -->
+        <div class="menu-card">
+            <h3>Bus Schedule</h3>
+            <p>View your assigned bus pickup routes and times.</p>
+            <button onclick="viewBusSchedule()">View Schedule</button>
+        </div>
+        <!-- Taxi Booking -->
+        <div class="menu-card">
+            <h3>Taxi Bookings</h3>
+            <p>View and accept taxi bookings from passengers.</p>
+            <button onclick="viewCarBookings()">View Bookings</button>
+        </div>
+</div>
+</body>
+</html>
