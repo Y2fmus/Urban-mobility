@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Driver Profile</title>
+</head>
+<body>
+
+<div class="header">
+    Edit Driver Profile
+</div>
+
+<div class="container">
+    <div class="profile-card">
+        <h3>Edit Driver Profile Information</h3>
+        
+        <!-- Driver Info Form -->
+        <form action="/submit-driver-profile" method="POST">
+            <div class="profile-info">
+                <p><label for="driverName">Driver Name:</label></p>
+                <input type="text" id="driverName" name="driverName" value="John Doe" required>
+            </div>
+            
+            <div class="profile-info">
+                <p><label for="driverPhone">Driver Phone:</label></p>
+                <input type="tel" id="driverPhone" name="driverPhone" value="+1234567890" required>
+            </div>
+            
+            <div class="profile-info">
+                <p><label for="driverLicense">Driver License Number:</label></p>
+                <input type="text" id="driverLicense" name="driverLicense" value="ABC123456" required>
+            </div>
+            
+            <!-- Submit Button -->
+            <br><button type="submit" class="btn">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
