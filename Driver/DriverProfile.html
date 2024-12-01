@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Profile</title>
+</head>
+<body>
+
+<div class="header">
+    Driver Profile
+</div>
+
+<div class="container">
+    <div class="profile-card">
+        <h3>Driver Profile Information</h3>
+        
+        <!-- Driver Info Section -->
+        <div class="profile-info">
+            <p><label for="driverName">Driver Name:</label></p>
+            <input type="text" id="driverName" value="John Doe" disabled>
+        </div>
+        
+        <div class="profile-info">
+            <p><label for="driverPhone">Driver Phone:</label></p>
+            <input type="tel" id="driverPhone" value="+1234567890" disabled>
+        </div>
+        
+        <div class="profile-info">
+            <p><label for="driverLicense">Driver License:</label></p>
+            <input type="text" id="driverLicense" value="ABC123456" disabled>
+        </div>
+        
+        <!-- Edit Button -->
+        <br><button class="btn" onclick="editProfile()">Edit Profile</button>
+    </div>
+</div>
+
+<script>
+    function editProfile() {
+        // Enable the fields for editing
+        document.getElementById("driverName").disabled = false;
+        document.getElementById("driverPhone").disabled = false;
+        document.getElementById("driverLicense").disabled = false;
+    }
+</script>
+
+</body>
+</html>
