@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<Html>
-    <head>
-        <title>Music Library Login</title>
-    </head>
-    <body>
-        //Ariez is here
-        <form action="LoginServlet" method="post">
-            <h1>Login</h1>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br>
-            <input type="submit" value="Login">
-        </form>
-    </body>
-</Html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="/submit-login" method="POST">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+        
+        <button type="submit">Login</button><br>
+    </form>
+</div>
+
+</body>
+</html>
